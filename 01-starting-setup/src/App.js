@@ -24,9 +24,14 @@ function App() {
     }
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In App.js')
+    console.log(expense)
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses}/> {/*Passes Expenses.js the expenses array where items here === items on Expenses.js*/}
     </div>
   );
